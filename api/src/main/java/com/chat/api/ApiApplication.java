@@ -1,16 +1,16 @@
-package org.example.back;
+package com.chat.api;
 
-import org.example.back.config.RsaKeyProperties;
+import com.chat.api.config.RsaKeyProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
 @EnableConfigurationProperties(RsaKeyProperties.class)
-public class BackApplication {
+public class ApiApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(BackApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ApiApplication.class, args);
+	}
 
 }
