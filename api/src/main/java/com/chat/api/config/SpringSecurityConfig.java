@@ -76,7 +76,7 @@ public class SpringSecurityConfig {
                 "/swagger-ui/**",
                 "/v3/api-docs/**",
                 "/swagger-ui.html",
-                "/websocket-app/**"
+                "/ws-api/**"
         );
     }
 
