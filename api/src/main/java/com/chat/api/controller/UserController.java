@@ -69,7 +69,7 @@ public class UserController {
         }
     }
 
-    @GetMapping(value = "/role", produces = { "application/json" })
+    @GetMapping(value = "/role-user", produces = { "application/json" })
     public ResponseEntity<Role> getUserRole(Authentication authentication) {
         try {
             Role role = roleService.getRoleByUserId(authentication.getName());

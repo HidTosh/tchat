@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="image">
+    <img src="assets/images/chat-icon.png">
+  </div>
+  <div class="box">
+    <div class="submit-button">
+      <button routerLink="/login" mat-raised-button color="primary">Se connecter</button>
+    </div>
+    <div class="submit-button">
+      <button routerLink="/register" mat-raised-button color="primary">S'inscrire</button>
+    </div>
+  </div>
+  <div class="flex-end-chat" *ngIf="isClientOrProspect">
+    <div class="chat-modal visible-modal-chat" [class.visible-modal-chat]="isVisibleModalChat">
+      <div class="center">
+        <div class="chat">
+          <div class="contact bar">
+            <div class="name">
+              {{ currentUserName }}
+            </div>
+          </div>
+          <div class="messages" id="chat">
+            <div class="time">
+              Today at {{ currentTime | date: 'HH:m' }}
+            </div>
+            <div class="message parker">
+              {{ longText }}👋
+            </div>
+            <div class="message stark">
+              Kid, where'd you come from?
+            </div>
+            <div class="message parker">
+              Field trip! 🤣
+            </div>
+            <div class="message parker">
+              Uh, what is this guy's problem, Mr. Stark? 🤔
+            </div>
+            <div class="message stark">
+              Uh, he's from space, he came here to steal a necklace from a wizard.
+            </div>
+
+            <div class="message stark">
+              Uh, he's from space, he came here to steal a necklace from a wizard.
+            </div>
+            <div class="message stark">
+              Uh, he's from space, he came here to steal a necklace from a wizard.
+            </div>
+            <div class="message stark">
+              Uh, he's from space, he came here to steal a necklace from a wizard.
+            </div>
+            <div class="message stark">
+              Uh, he's from space, he came here to steal a necklace from a wizard.
+            </div>            <div class="message stark">
+            Uh, he's from space, he came here to steal a necklace from a wizard.
+          </div>
+
+          </div>
+          <div class="form-send">
+            <input placeholder="Type your message here!" type="text" [formControl]="messageContent" />
+            <button type="button" class="pointer" (click)="sendMessage()"><img src="assets/images/send.png"> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div-chat-btn">
+      <button type="button" class="pointer" (click)="chatOpen()"><img src="assets/images/chat.png"></button>
+    </div>
+  </div>
+</div>
+
+
+
