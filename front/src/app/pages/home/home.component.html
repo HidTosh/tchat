@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="flex-end-chat" *ngIf="isClientOrProspect">
-    <div class="chat-modal visible-modal-chat" [class.visible-modal-chat]="isVisibleModalChat">
+    <div class="chat-modal" [class.visible-modal-chat]="isVisibleModalChat">
       <div class="center">
         <div class="chat">
           <div class="contact bar">
@@ -24,36 +24,16 @@
               Today at {{ currentTime | date: 'HH:m' }}
             </div>
             <div class="message parker">
-              {{ longText }}👋
+              {{ welcomeMessage }}👋
             </div>
-            <div class="message stark">
-              Kid, where'd you come from?
+            <div *ngFor="let message of listMessages">
+              <div *ngIf="message.type == 'ADMIN'" class="message parker">
+                {{ message.content }}
+              </div>
+              <div *ngIf="message.receiver == 'support'" class="message stark">
+                {{ message.content }}
+              </div>
             </div>
-            <div class="message parker">
-              Field trip! 🤣
-            </div>
-            <div class="message parker">
-              Uh, what is this guy's problem, Mr. Stark? 🤔
-            </div>
-            <div class="message stark">
-              Uh, he's from space, he came here to steal a necklace from a wizard.
-            </div>
-
-            <div class="message stark">
-              Uh, he's from space, he came here to steal a necklace from a wizard.
-            </div>
-            <div class="message stark">
-              Uh, he's from space, he came here to steal a necklace from a wizard.
-            </div>
-            <div class="message stark">
-              Uh, he's from space, he came here to steal a necklace from a wizard.
-            </div>
-            <div class="message stark">
-              Uh, he's from space, he came here to steal a necklace from a wizard.
-            </div>            <div class="message stark">
-            Uh, he's from space, he came here to steal a necklace from a wizard.
-          </div>
-
           </div>
           <div class="form-send">
             <input placeholder="Type your message here!" type="text" [formControl]="messageContent" />
@@ -67,6 +47,3 @@
     </div>
   </div>
 </div>
-
-
-

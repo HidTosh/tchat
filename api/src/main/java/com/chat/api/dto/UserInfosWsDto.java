@@ -11,8 +11,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UserInfosWsDto {
     private Integer user_id;
-    private String Uuid;
-    private String Username;
+    private String uuid;
+    private String userName;
     private String type;
     private Boolean status;
 }

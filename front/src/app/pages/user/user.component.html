@@ -1,1 +1,16 @@
-<p>user works!</p>
+<div class="mat-card-form">
+  <form class="user-form">
+    <mat-form-field class="mat-form-field">
+      <input matInput placeholder="Name" [defaultValue]="name" disabled>
+    </mat-form-field>
+    <mat-form-field class="mat-form-field">
+      <input matInput placeholder="Email" [defaultValue]="email" disabled>
+    </mat-form-field>
+    <mat-form-field class="mat-form-field">
+      <input matInput placeholder="Role" [defaultValue]="role" disabled>
+    </mat-form-field>
+    <div class="save-btn">
+      <button mat-raised-button (click)="logout()" type="submit">Se déconnecter</button>
+    </div>
+  </form>
+</div>

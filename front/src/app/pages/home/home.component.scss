@@ -24,7 +24,7 @@
     width: 150px;
     height: 42px;
     font-size: 16px;
-    background: aqua;
+    background: #00b3b3;
     font-weight: bold;
   }
 }
@@ -47,6 +47,7 @@
   width: 430px;
   height: 460px;
   margin-bottom: 150px;
+  display: none;
 }
 .center {
   position: absolute;
@@ -82,6 +83,7 @@
 }
 
 .chat .messages {
+  min-height: 350px;
   padding: 1rem;
   background: #F7F7F7;
   flex-shrink: 2;
@@ -100,7 +102,7 @@
   margin: 0 auto;
 }
 
-.chat .messages .message {
+:host ::ng-deep .chat .messages .message {
   box-sizing: border-box;
   padding: 0.5rem 1rem;
   margin: 1rem;
@@ -112,7 +114,7 @@
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.075), 0 1rem 1rem -1rem rgba(0, 0, 0, 0.1);
 }
 
-.chat .messages .message.parker {
+:host ::ng-deep .chat .messages .message.parker {
   margin: 1rem 1rem 1rem auto;
   border-radius: 1.125rem 1.125rem 0 1.125rem;
   background: #333;
@@ -151,5 +153,5 @@
 }
 
 .visible-modal-chat {
-  display: none;
+  display: inline-block;
 }

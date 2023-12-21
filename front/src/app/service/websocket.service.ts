@@ -9,7 +9,7 @@ export class WebsocketService {
   constructor() { }
 
   public connectWs(): CompatClient {
-    let socket = new SockJS('http://localhost:3001/ws-api');
+    let socket: WebSocket = new SockJS('http://localhost:3001/ws-api');
     return Stomp.over(socket);
   }
 }
