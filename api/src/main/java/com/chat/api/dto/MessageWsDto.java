@@ -10,6 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MessageWsDto {
+    private String userName;
     private String sender;
     private String receiver;
     private String content;

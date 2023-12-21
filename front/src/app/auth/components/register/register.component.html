@@ -1,0 +1,40 @@
+<div class="arrow-back">
+  <p>
+    <a href="/"><mat-icon class="mat-icon-back">keyboard_backspace</mat-icon></a>
+  </p>
+</div>
+<div class="register">
+  <div>
+    <div class="title">
+      <p>Inscription</p>
+    </div>
+    <form class="register-form" [formGroup]="registerForm" (ngSubmit)="submit()">
+      <div class="form-content">
+        <div>
+          <label for="name">Nom d'utilisateur</label><br>
+          <input id="name" matInput formControlName="name" (keyup)="isValidName()">
+          <p class="error-input" *ngIf="validNameError">Doit contenir au moins 5 caractères</p>
+        </div>
+        <div>
+          <label for="email">Adresse e-mail</label><br>
+          <input id="email" matInput formControlName="email">
+        </div>
+        <div>
+          <label for="password">Mot de passe</label><br>
+          <input id="password" matInput formControlName="password" type="password">
+          <p class="error-input" *ngIf="validPasswordError">
+            Doit contenir au moins 8 caractères:<br/>
+            - 1 chiffre<br/>
+            - 1 lettre minuscule<br/>
+            - 1 lettre majuscule<br/>
+            - 1 caractère spécial
+          </p>
+        </div>
+      </div>
+      <div class="submit-button">
+        <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">S'inscrire</button>
+        <p *ngIf="onError" class="error">An error occurred</p>
+      </div>
+    </form>
+  </div>
+</div>

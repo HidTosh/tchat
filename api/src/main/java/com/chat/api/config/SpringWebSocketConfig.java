@@ -21,7 +21,7 @@ public class SpringWebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry
                 .addEndpoint("/ws-api")
-                .setAllowedOrigins("http://localhost")
+                .setAllowedOrigins("http://localhost:4200")
                 .withSockJS();
     }
 }

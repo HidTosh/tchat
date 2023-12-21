@@ -1,0 +1,35 @@
+<div class="list-users-messages">
+  <div class="list-users">
+    <div class="user-header"><p>Utilisateurs connectés</p></div>
+    <div
+      class="user-infos pointer"
+      *ngFor="let user of listUsers" id="{{ user.uuid }}"
+      (click)="userClicked($event, user)"
+    >
+      <img class="avatar-img" src="/assets/images/avatar.png">
+      <span class="user-name">{{ user.userName }}</span>
+      <span class="user-status">
+        <img *ngIf="user.status" class="img-available" src="assets/images/circle-green.png">
+        <img *ngIf="!user.status" class="img-non-available" src="assets/images/circle-gray.png">
+      </span>
+    </div>
+  </div>
+  <div class="list-message">
+    <div class="message-header"><p>Messages échangés: {{ currentUserName }}</p></div>
+    <div class="time">
+      Today at
+    </div>
+    <div *ngFor="let currentMsg of currentMessages">
+      <div *ngIf="currentMsg.receiver == 'support'" class="message stark">
+        {{ currentMsg.content }}
+      </div>
+      <div *ngIf="currentMsg.receiver == currentUuid" class="message parker">
+        {{ currentMsg.content }}
+      </div>
+    </div>
+    <div class="form-send">
+      <input placeholder="Type your message here!" type="text" [formControl]="messageContent" />
+      <button type="button" class="pointer" (click)="sendMessage()"><img src="assets/images/send.png"> </button>
+    </div>
+  </div>
+</div>

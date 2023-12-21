@@ -1,0 +1,157 @@
+.container {
+  height: 85vh;
+}
+
+.image {
+  text-align: center;
+  margin-top: 3%;
+  img {
+    width: 280px;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.submit-button {
+  text-align: center;
+  margin: 20px 40px 0 0;
+
+  button {
+    width: 150px;
+    height: 42px;
+    font-size: 16px;
+    background: #00b3b3;
+    font-weight: bold;
+  }
+}
+
+.flex-end-chat {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  button {
+    border: solid 0;
+    border-radius: 15px;
+    img {
+      width: 40px;
+    };
+  }
+}
+
+.chat-modal {
+  width: 430px;
+  height: 460px;
+  margin-bottom: 150px;
+  display: none;
+}
+.center {
+  position: absolute;
+  left: calc(50% + 0rem);
+  transform: translate(-50%, -50%);
+  top: 330px;
+}
+
+.chat {
+  min-width: 400px;
+  max-height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 0 8rem 0 rgba(0, 0, 0, 0.1), 0 2rem 4rem -3rem rgba(0, 0, 0, 0.5);
+}
+
+.contact {
+  position: relative;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: gray;
+}
+
+.chat .messages {
+  min-height: 350px;
+  padding: 1rem;
+  background: #F7F7F7;
+  flex-shrink: 2;
+  overflow-y: auto;
+  box-shadow: inset 0 2rem 2rem -2rem rgba(0, 0, 0, 0.05), inset 0 -2rem 2rem -2rem rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+}
+
+.chat .messages .time {
+  font-size: 0.8rem;
+  background: #EEE;
+  padding: 0.25rem 1rem;
+  border-radius: 2rem;
+  color: #999;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+:host ::ng-deep .chat .messages .message {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background: #FFF;
+  border-radius: 1.125rem 1.125rem 1.125rem 0;
+  min-height: 2.25rem;
+  width: fit-content;
+  max-width: 66%;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.075), 0 1rem 1rem -1rem rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .chat .messages .message.parker {
+  margin: 1rem 1rem 1rem auto;
+  border-radius: 1.125rem 1.125rem 0 1.125rem;
+  background: #333;
+  color: white;
+}
+
+.chat .form-send {
+  box-sizing: border-box;
+  flex-basis: 4rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem 0 1.5rem;
+}
+
+.chat .form-send input {
+  border: none;
+  background-image: none;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border-radius: 1.125rem;
+  flex-grow: 2;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1), 0 1rem 1rem -1rem rgba(0, 0, 0, 0.2);
+  font-family: Red hat Display, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+}
+
+.div-chat-btn {
+  text-align: right;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.visible-modal-chat {
+  display: inline-block;
+}

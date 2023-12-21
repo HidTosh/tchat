@@ -29,7 +29,11 @@ public class ChatWsController {
         SimpMessageHeaderAccessor messageHeader
     ) {
         // Set username in web socket session
-        messageHeader.getSessionAttributes().put("username", user.getUsername());
+        messageHeader.getSessionAttributes().put("username", user.getUserName());
+        messageHeader.getSessionAttributes().put("uuid", user.getUuid());
+        messageHeader.getSessionAttributes().put("user_id", user.getUser_id());
+        messageHeader.getSessionAttributes().put("type", user.getType());
+
         return user;
     }
 
@@ -41,11 +45,12 @@ public class ChatWsController {
 
         String time = new SimpleDateFormat("HH:mm").format(new Date());
         return new MessageWsDto(
+            message.getUserName(),
             message.getSender(),
             message.getReceiver(),
             message.getContent(),
-            dtf.format(now),
-            message.getType()
+            message.getType(),
+            dtf.format(now)
         );
     }
 
