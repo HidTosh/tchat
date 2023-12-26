@@ -70,7 +70,14 @@ export class ChatComponent implements OnInit {
         }
       )
       this.listUsers.push(userData);
+      //this.filterConnectedUsers();
     }
+  }
+
+  filterConnectedUsers() {
+    this.listUsers = this.listUsers.filter(
+      (obj: userWs): boolean => obj.status
+    );
   }
 
   errorCallback(): void {

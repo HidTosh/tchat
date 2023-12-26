@@ -38,14 +38,6 @@ public class WebSocketChatEventListener {
                 (String) userInfos.get("type"),
                 false
             );
-/*
-            private Integer user_id;
-            private String Uuid;
-            private String Username;
-            private String type;
-            */
-
-            //user.setStatus(false);
 
             messagingTemplate.convertAndSend("/topic/messages", user);
         }
