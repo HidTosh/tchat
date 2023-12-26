@@ -17,7 +17,7 @@
   <div class="list-message">
     <div class="message-header"><p>Messages échangés: {{ currentUserName }}</p></div>
     <div class="time">
-      Today at
+      Today at {{ currentTime | date: 'HH:m' }}
     </div>
     <div *ngFor="let currentMsg of currentMessages">
       <div *ngIf="currentMsg.receiver == 'support'" class="message stark">

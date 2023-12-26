@@ -17,6 +17,7 @@ export class ChatComponent implements OnInit {
   public currentMessages: Array<messageWs> = [];
   public listMessages: Array<messageWs> = [];
   private isConnected: boolean = false;
+  public currentTime: Date = new Date();
   public listUsers: Array<userWs> = [];
   public currentUserName: String = "";
   public currentUuid: String = "";
