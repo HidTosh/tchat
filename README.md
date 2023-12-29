@@ -41,7 +41,7 @@ openssl pkcs8 -topk8 -inform PEM -outform PEM -nocrypt -in keypair.pem -out priv
     -  `mvn spring-boot:run` # start project 
 
 
-After mvn spring-boot:run the api will start on http://localhost:3001. A Swagger documentation is also available at http://localhost:3001/swagger-ui/index.html
+After mvn spring-boot:run the api will start on http://localhost:3001.
 
 # front
 
